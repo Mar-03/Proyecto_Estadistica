@@ -4,6 +4,9 @@
  */
 package Vista;
 
+import Controlador.ControladorAgrupados;
+import Modelo.ModeloAgrupados;
+
 /**
  *
  * @author Cindy Ruano
@@ -15,6 +18,10 @@ public class VistaAgrupados extends javax.swing.JFrame {
      */
     public VistaAgrupados() {
         initComponents();
+//        
+//        Modelo.ModeloAgrupados modelo = new ModeloAgrupados(this);
+//        Controlador.ControladorAgrupados controlador = new ControladorAgrupados(modelo);
+//        setControlador(controlador);
     }
 
     /**
@@ -77,6 +84,11 @@ public class VistaAgrupados extends javax.swing.JFrame {
         btnCalcularAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         btnCalcularAgrupados.setText("Calcular");
         btnCalcularAgrupados.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
+        btnCalcularAgrupados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularAgrupadosActionPerformed(evt);
+            }
+        });
 
         btnLimpiarAgrupados.setBackground(new java.awt.Color(202, 183, 183));
         btnLimpiarAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
@@ -168,6 +180,10 @@ public class VistaAgrupados extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnCalcularAgrupadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularAgrupadosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCalcularAgrupadosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -204,8 +220,8 @@ public class VistaAgrupados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalcularAgrupados;
-    private javax.swing.JButton btnLimpiarAgrupados;
+    public javax.swing.JButton btnCalcularAgrupados;
+    public javax.swing.JButton btnLimpiarAgrupados;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -213,9 +229,15 @@ public class VistaAgrupados extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable tblAgrupados;
-    private javax.swing.JTextField txtFrecuencias;
-    private javax.swing.JTextField txtLimInferiores;
-    private javax.swing.JTextField txtLimSuperiores;
+    public javax.swing.JTable tblAgrupados;
+    public javax.swing.JTextField txtFrecuencias;
+    public javax.swing.JTextField txtLimInferiores;
+    public javax.swing.JTextField txtLimSuperiores;
     // End of variables declaration//GEN-END:variables
+
+    public void setControlador (ControladorAgrupados controlador){
+//        btnCalcularAgrupados.addMouseListener(controlador);
+    }
+
 }
+
