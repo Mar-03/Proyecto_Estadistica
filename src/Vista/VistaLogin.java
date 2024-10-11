@@ -44,7 +44,7 @@ public class VistaLogin extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 204, 255));
         jPanel1.setForeground(new java.awt.Color(255, 153, 255));
 
-        jPanel2.setBackground(new java.awt.Color(224, 190, 224));
+        jPanel2.setBackground(new java.awt.Color(235, 200, 200));
 
         jLabel1.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         jLabel1.setText("Dato:");
