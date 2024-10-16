@@ -4,6 +4,10 @@
  */
 package proyecto_estadistica;
 
+import Controlador.ControladorNoAgrupados;
+import Vista.VistaNoAgrupados;
+import modelo.ModeloNoAgrupados;
+
 /**
  *
  * @author Cindy Ruano
@@ -14,7 +18,13 @@ public class Proyecto_Estadistica {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        VistaNoAgrupados vista = new VistaNoAgrupados();
+        ModeloNoAgrupados modelo = new ModeloNoAgrupados();
+
+         new ControladorNoAgrupados(vista, modelo);
+
+     
+        vista.setVisible(true);
     }
     
 }
