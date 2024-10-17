@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
-/**
- *
- * @author Cindy Ruano
- */
 public class ModeloAgrupados {
-    
+
     private int limSuperiores;
     private int limInferiores;
     private int frecuencias;
@@ -153,8 +145,4 @@ public class ModeloAgrupados {
     public void setDatos(int datos) {
         this.datos = datos;
     }
-    
-    
-    
-    
 }

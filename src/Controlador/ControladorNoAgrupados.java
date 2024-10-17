@@ -1,21 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Controlador;
 
 import Vista.VistaNoAgrupados;
 import modelo.ModeloNoAgrupados;
 
-/**
- *
- * @author Cindy Ruano
- */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 import javax.swing.JOptionPane;
-
 
 public class ControladorNoAgrupados {
 
@@ -25,8 +16,6 @@ public class ControladorNoAgrupados {
     public ControladorNoAgrupados(VistaNoAgrupados vista, ModeloNoAgrupados modelo) {
         this.vista = vista;
         this.modelo = modelo;
-
-     
         this.vista.addCalcularListener(new CalcularListener());
         this.vista.addLimpiarListener(new LimpiarListener());
         this.vista.addImprimirListener(new ImprimirListener());
@@ -34,6 +23,7 @@ public class ControladorNoAgrupados {
 
     // Listener para el botón "Calcular"
     class CalcularListener implements ActionListener {
+
         @Override
         public void actionPerformed(ActionEvent e) {
             calcularEstadisticas();
@@ -42,6 +32,7 @@ public class ControladorNoAgrupados {
 
     // Listener para el botón "Limpiar"
     class LimpiarListener implements ActionListener {
+
         @Override
         public void actionPerformed(ActionEvent e) {
             vista.limpiarCampos();
@@ -50,9 +41,9 @@ public class ControladorNoAgrupados {
 
     // Listener para el botón "Imprimir"
     class ImprimirListener implements ActionListener {
+
         @Override
         public void actionPerformed(ActionEvent e) {
-          
         }
     }
 
@@ -66,7 +57,7 @@ public class ControladorNoAgrupados {
             // Convertir los datos de String a double
             double[] datos = new double[strDatos.length];
             for (int i = 0; i < strDatos.length; i++) {
-                datos[i] = Double.parseDouble(strDatos[i].trim()); 
+                datos[i] = Double.parseDouble(strDatos[i].trim());
             }
 
             // Calcular las estadísticas usando el modelo
@@ -74,7 +65,7 @@ public class ControladorNoAgrupados {
             double mediana = modelo.calcularMediana(datos);
             double moda = modelo.calcularModa(datos);
             double[] ponderaciones = new double[datos.length];
-            Arrays.fill(ponderaciones, 1);  
+            Arrays.fill(ponderaciones, 1);
             double mediaPonderada = modelo.calcularMediaPonderada(datos, ponderaciones);
 
             // Mostrar los resultados en la tabla en la vista
@@ -87,7 +78,4 @@ public class ControladorNoAgrupados {
             JOptionPane.showMessageDialog(vista, "Por favor ingrese números válidos separados por comas.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
-
-   
-    
 }
