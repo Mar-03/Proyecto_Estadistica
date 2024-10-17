@@ -26,7 +26,7 @@ public class ControladorNoAgrupados {
         this.vista = vista;
         this.modelo = modelo;
 
-        // Añadir listeners a los botones
+     
         this.vista.addCalcularListener(new CalcularListener());
         this.vista.addLimpiarListener(new LimpiarListener());
         this.vista.addImprimirListener(new ImprimirListener());
@@ -52,7 +52,7 @@ public class ControladorNoAgrupados {
     class ImprimirListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            // Implementar funcionalidad de impresión
+          
         }
     }
 
@@ -66,7 +66,7 @@ public class ControladorNoAgrupados {
             // Convertir los datos de String a double
             double[] datos = new double[strDatos.length];
             for (int i = 0; i < strDatos.length; i++) {
-                datos[i] = Double.parseDouble(strDatos[i].trim()); // .trim() para quitar espacios
+                datos[i] = Double.parseDouble(strDatos[i].trim()); 
             }
 
             // Calcular las estadísticas usando el modelo
@@ -74,7 +74,7 @@ public class ControladorNoAgrupados {
             double mediana = modelo.calcularMediana(datos);
             double moda = modelo.calcularModa(datos);
             double[] ponderaciones = new double[datos.length];
-            Arrays.fill(ponderaciones, 1);  // Suponiendo ponderaciones iguales
+            Arrays.fill(ponderaciones, 1);  
             double mediaPonderada = modelo.calcularMediaPonderada(datos, ponderaciones);
 
             // Mostrar los resultados en la tabla en la vista
