@@ -32,10 +32,10 @@ public class VistaInicio extends javax.swing.JFrame {
         btnSiInicio = new javax.swing.JButton();
         btnNoInicio = new javax.swing.JButton();
         separadorInicio = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
         letFondoInicio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 530));
 
         fondoPanel.setMinimumSize(new java.awt.Dimension(600, 530));
         fondoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -44,13 +44,13 @@ public class VistaInicio extends javax.swing.JFrame {
         letTituloInicio.setForeground(new java.awt.Color(255, 255, 255));
         letTituloInicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         letTituloInicio.setText("MEDIDAS DE DISPERSIÓN");
-        fondoPanel.add(letTituloInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 600, -1));
+        fondoPanel.add(letTituloInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 600, -1));
 
         letPregundaInicio.setFont(new java.awt.Font("Arial Unicode MS", 0, 16)); // NOI18N
         letPregundaInicio.setForeground(new java.awt.Color(57, 54, 54));
         letPregundaInicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         letPregundaInicio.setText("¿Los datos a ingresar son más de 15 digitos? ");
-        fondoPanel.add(letPregundaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 600, -1));
+        fondoPanel.add(letPregundaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 600, -1));
 
         btnSiInicio.setBackground(new java.awt.Color(202, 183, 183));
         btnSiInicio.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
@@ -62,17 +62,20 @@ public class VistaInicio extends javax.swing.JFrame {
                 btnSiInicioActionPerformed(evt);
             }
         });
-        fondoPanel.add(btnSiInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 80, -1));
+        fondoPanel.add(btnSiInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 80, -1));
 
         btnNoInicio.setBackground(new java.awt.Color(202, 183, 183));
         btnNoInicio.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         btnNoInicio.setForeground(new java.awt.Color(57, 54, 54));
         btnNoInicio.setText("NO");
         btnNoInicio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
-        fondoPanel.add(btnNoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, 80, -1));
+        fondoPanel.add(btnNoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 80, -1));
 
         separadorInicio.setForeground(new java.awt.Color(255, 255, 255));
-        fondoPanel.add(separadorInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 227, 460, -1));
+        fondoPanel.add(separadorInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 360, 20));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/2.png"))); // NOI18N
+        fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 270, 130));
 
         letFondoInicio.setBackground(new java.awt.Color(235, 200, 200));
         letFondoInicio.setOpaque(true);
@@ -135,6 +138,7 @@ public class VistaInicio extends javax.swing.JFrame {
     private javax.swing.JButton btnNoInicio;
     private javax.swing.JButton btnSiInicio;
     private javax.swing.JPanel fondoPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel letFondoInicio;
     private javax.swing.JLabel letPregundaInicio;
     private javax.swing.JLabel letTituloInicio;

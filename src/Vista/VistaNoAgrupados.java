@@ -72,6 +72,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         btnLimpiar = new javax.swing.JButton();
         btnImprimir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         letFondoNoAgrupados = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,7 +83,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         letTituloNoAgrupados.setForeground(new java.awt.Color(255, 255, 255));
         letTituloNoAgrupados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         letTituloNoAgrupados.setText("DATOS NO AGRUPADOS");
-        fondoPanel.add(letTituloNoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 600, -1));
+        fondoPanel.add(letTituloNoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 600, -1));
 
         tblNoAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 12)); // NOI18N
         tblNoAgrupados.setForeground(new java.awt.Color(57, 54, 54));
@@ -156,6 +157,9 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
 
         jLabel1.setText("ACA VA RANGO, DESVIACIÓN MEDIA Y DESVIACIÓN TÍPICA O ESTÁNDAR");
         fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/3.png"))); // NOI18N
+        fondoPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 120, 60));
 
         letFondoNoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
         letFondoNoAgrupados.setOpaque(true);
@@ -232,6 +236,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JPanel fondoPanel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel letDatos;
     private javax.swing.JLabel letFondoNoAgrupados;
     private javax.swing.JLabel letTituloNoAgrupados;

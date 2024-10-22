@@ -51,10 +51,10 @@ public class VistaAgrupados extends javax.swing.JFrame {
         letDesviacionMedia = new javax.swing.JLabel();
         letDesviacionTipica = new javax.swing.JLabel();
         btnImprimir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         letFondoAgrupados = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 530));
 
         fondoPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         fondoPanel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -66,7 +66,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
         letTituloAgrupados.setForeground(new java.awt.Color(255, 255, 255));
         letTituloAgrupados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         letTituloAgrupados.setText("DATOS AGRUPADOS");
-        fondoPanel.add(letTituloAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 54, 600, 22));
+        fondoPanel.add(letTituloAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 600, 22));
 
         letLimSuperiores.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         letLimSuperiores.setForeground(new java.awt.Color(57, 54, 54));
@@ -161,6 +161,9 @@ public class VistaAgrupados extends javax.swing.JFrame {
         });
         fondoPanel.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 80, -1));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/3.png"))); // NOI18N
+        fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 140, 60));
+
         letFondoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
         letFondoAgrupados.setOpaque(true);
         fondoPanel.add(letFondoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 530));
@@ -227,6 +230,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
     private javax.swing.JButton btnImprimir;
     public javax.swing.JButton btnLimpiarAgrupados;
     private javax.swing.JPanel fondoPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel letDesviacionMedia;
     private javax.swing.JLabel letDesviacionTipica;
     private javax.swing.JLabel letFondoAgrupados;
