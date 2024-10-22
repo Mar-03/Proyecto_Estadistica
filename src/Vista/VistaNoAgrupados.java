@@ -61,28 +61,34 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        fondoPanel = new javax.swing.JPanel();
+        letTituloNoAgrupados = new javax.swing.JLabel();
+        tablaNoAgrupados = new javax.swing.JScrollPane();
         tblNoAgrupados = new javax.swing.JTable();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
+        separador = new javax.swing.JSeparator();
+        letDatos = new javax.swing.JLabel();
         txtDato = new javax.swing.JTextField();
         btnCalcular = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
         btnImprimir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        letFondoNoAgrupados = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(235, 200, 200));
+        fondoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Dubai Light", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("DATOS NO AGRUPADOS");
+        letTituloNoAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 24)); // NOI18N
+        letTituloNoAgrupados.setForeground(new java.awt.Color(255, 255, 255));
+        letTituloNoAgrupados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        letTituloNoAgrupados.setText("DATOS NO AGRUPADOS");
+        fondoPanel.add(letTituloNoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 600, -1));
 
         tblNoAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 12)); // NOI18N
+        tblNoAgrupados.setForeground(new java.awt.Color(57, 54, 54));
         tblNoAgrupados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -92,21 +98,29 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
                 "Media Aritmética", "Media Ponderada", "Mediana", "Moda"
             }
         ));
-        jScrollPane1.setViewportView(tblNoAgrupados);
+        tblNoAgrupados.setSelectionForeground(new java.awt.Color(57, 54, 54));
+        tablaNoAgrupados.setViewportView(tblNoAgrupados);
 
-        jSeparator1.setForeground(new java.awt.Color(202, 183, 183));
+        fondoPanel.add(tablaNoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 489, 130));
 
-        jLabel2.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jLabel2.setText("Datos:");
+        separador.setForeground(new java.awt.Color(255, 255, 255));
+        fondoPanel.add(separador, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 157, 310, -1));
+
+        letDatos.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        letDatos.setForeground(new java.awt.Color(57, 54, 54));
+        letDatos.setText("Datos:");
+        fondoPanel.add(letDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
 
         txtDato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDatoActionPerformed(evt);
             }
         });
+        fondoPanel.add(txtDato, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 185, -1));
 
         btnCalcular.setBackground(new java.awt.Color(202, 183, 183));
         btnCalcular.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        btnCalcular.setForeground(new java.awt.Color(57, 54, 54));
         btnCalcular.setText("Calcular");
         btnCalcular.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
         btnCalcular.addActionListener(new java.awt.event.ActionListener() {
@@ -114,9 +128,11 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
                 btnCalcularActionPerformed(evt);
             }
         });
+        fondoPanel.add(btnCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 75, -1));
 
         btnLimpiar.setBackground(new java.awt.Color(202, 183, 183));
         btnLimpiar.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(57, 54, 54));
         btnLimpiar.setText("Limpiar");
         btnLimpiar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -124,9 +140,11 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
                 btnLimpiarActionPerformed(evt);
             }
         });
+        fondoPanel.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 75, -1));
 
         btnImprimir.setBackground(new java.awt.Color(202, 183, 183));
         btnImprimir.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        btnImprimir.setForeground(new java.awt.Color(57, 54, 54));
         btnImprimir.setText("Imprimir");
         btnImprimir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
         btnImprimir.addActionListener(new java.awt.event.ActionListener() {
@@ -134,62 +152,24 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
                 btnImprimirActionPerformed(evt);
             }
         });
+        fondoPanel.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 75, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(54, 54, 54)
-                            .addComponent(jLabel2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtDato)
-                            .addGap(18, 18, 18)
-                            .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(52, 52, 52)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(59, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtDato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnImprimir)
-                    .addComponent(btnLimpiar)
-                    .addComponent(btnCalcular))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
+        jLabel1.setText("ACA VA RANGO, DESVIACIÓN MEDIA Y DESVIACIÓN TÍPICA O ESTÁNDAR");
+        fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, -1, -1));
+
+        letFondoNoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
+        letFondoNoAgrupados.setOpaque(true);
+        fondoPanel.add(letFondoNoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 530));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(fondoPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(fondoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -250,11 +230,13 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnImprimir;
     private javax.swing.JButton btnLimpiar;
+    private javax.swing.JPanel fondoPanel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel letDatos;
+    private javax.swing.JLabel letFondoNoAgrupados;
+    private javax.swing.JLabel letTituloNoAgrupados;
+    private javax.swing.JSeparator separador;
+    private javax.swing.JScrollPane tablaNoAgrupados;
     private javax.swing.JTable tblNoAgrupados;
     private javax.swing.JTextField txtDato;
     // End of variables declaration//GEN-END:variables

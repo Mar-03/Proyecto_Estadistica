@@ -33,56 +33,81 @@ public class VistaAgrupados extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        fondoPanel = new javax.swing.JPanel();
+        letTituloAgrupados = new javax.swing.JLabel();
+        letLimSuperiores = new javax.swing.JLabel();
+        letLimInferiores = new javax.swing.JLabel();
+        letFrecuencias = new javax.swing.JLabel();
+        tablaAgrupados = new javax.swing.JScrollPane();
         tblAgrupados = new javax.swing.JTable();
         txtLimSuperiores = new javax.swing.JTextField();
         txtLimInferiores = new javax.swing.JTextField();
         txtFrecuencias = new javax.swing.JTextField();
         btnCalcularAgrupados = new javax.swing.JButton();
         btnLimpiarAgrupados = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
+        separador = new javax.swing.JSeparator();
+        letVarianza = new javax.swing.JLabel();
+        letMarcaClase = new javax.swing.JLabel();
+        letDesviacionMedia = new javax.swing.JLabel();
+        letDesviacionTipica = new javax.swing.JLabel();
+        btnImprimir = new javax.swing.JButton();
+        letFondoAgrupados = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(600, 530));
 
-        jPanel1.setBackground(new java.awt.Color(235, 200, 200));
-        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        fondoPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fondoPanel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        fondoPanel.setMinimumSize(new java.awt.Dimension(600, 530));
+        fondoPanel.setPreferredSize(new java.awt.Dimension(600, 530));
+        fondoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Dubai Light", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("DATOS AGRUPADOS");
+        letTituloAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 24)); // NOI18N
+        letTituloAgrupados.setForeground(new java.awt.Color(255, 255, 255));
+        letTituloAgrupados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        letTituloAgrupados.setText("DATOS AGRUPADOS");
+        fondoPanel.add(letTituloAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 54, 600, 22));
 
-        jLabel2.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jLabel2.setText("Limites Superiores:");
+        letLimSuperiores.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        letLimSuperiores.setForeground(new java.awt.Color(57, 54, 54));
+        letLimSuperiores.setText("Limites Superiores:");
+        fondoPanel.add(letLimSuperiores, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 125, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jLabel3.setText("Limites Inferiores:");
+        letLimInferiores.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        letLimInferiores.setForeground(new java.awt.Color(57, 54, 54));
+        letLimInferiores.setText("Limites Inferiores:");
+        fondoPanel.add(letLimInferiores, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 159, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jLabel4.setText("Frecuencias:");
+        letFrecuencias.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        letFrecuencias.setForeground(new java.awt.Color(57, 54, 54));
+        letFrecuencias.setText("Frecuencias:");
+        fondoPanel.add(letFrecuencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 187, -1, -1));
 
         tblAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 12)); // NOI18N
+        tblAgrupados.setForeground(new java.awt.Color(57, 54, 54));
         tblAgrupados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Marca Clase", "Media ", "Mediana", "Moda", "Varianza", "Des. Media", "Des. Típica"
+                "Variables", "f", "x", "f  *  x", "|x - x̅|", "|x - x̅| 2", "f * |x - x̅|", "f * |x - x̅| 2"
             }
         ));
         tblAgrupados.setGridColor(new java.awt.Color(202, 183, 183));
-        jScrollPane1.setViewportView(tblAgrupados);
+        tblAgrupados.setSelectionForeground(new java.awt.Color(57, 54, 54));
+        tablaAgrupados.setViewportView(tblAgrupados);
+
+        fondoPanel.add(tablaAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 236, 530, 147));
+        fondoPanel.add(txtLimSuperiores, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 124, 250, -1));
+        fondoPanel.add(txtLimInferiores, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 158, 250, -1));
+        fondoPanel.add(txtFrecuencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 186, 250, -1));
 
         btnCalcularAgrupados.setBackground(new java.awt.Color(202, 183, 183));
         btnCalcularAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        btnCalcularAgrupados.setForeground(new java.awt.Color(57, 54, 54));
         btnCalcularAgrupados.setText("Calcular");
         btnCalcularAgrupados.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
         btnCalcularAgrupados.addActionListener(new java.awt.event.ActionListener() {
@@ -90,86 +115,65 @@ public class VistaAgrupados extends javax.swing.JFrame {
                 btnCalcularAgrupadosActionPerformed(evt);
             }
         });
+        fondoPanel.add(btnCalcularAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, 80, -1));
 
         btnLimpiarAgrupados.setBackground(new java.awt.Color(202, 183, 183));
         btnLimpiarAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        btnLimpiarAgrupados.setForeground(new java.awt.Color(57, 54, 54));
         btnLimpiarAgrupados.setText("Limpiar");
         btnLimpiarAgrupados.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
+        fondoPanel.add(btnLimpiarAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 80, -1));
 
-        jSeparator1.setForeground(new java.awt.Color(202, 183, 183));
-        jSeparator1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jSeparator1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        separador.setForeground(new java.awt.Color(255, 255, 255));
+        separador.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        separador.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        fondoPanel.add(separador, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 82, 270, 11));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtLimInferiores, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                                .addComponent(txtFrecuencias)
-                                .addComponent(txtLimSuperiores))
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLimpiarAgrupados, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCalcularAgrupados, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(28, Short.MAX_VALUE))
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtLimSuperiores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtLimInferiores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtFrecuencias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(28, 28, 28))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnCalcularAgrupados)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnLimpiarAgrupados)
-                        .addGap(39, 39, 39)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36))
-        );
+        letVarianza.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        letVarianza.setForeground(new java.awt.Color(57, 54, 54));
+        letVarianza.setText("Varianza:");
+        fondoPanel.add(letVarianza, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, -1, -1));
+
+        letMarcaClase.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        letMarcaClase.setForeground(new java.awt.Color(57, 54, 54));
+        letMarcaClase.setText("Marca de clase:");
+        fondoPanel.add(letMarcaClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
+
+        letDesviacionMedia.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        letDesviacionMedia.setForeground(new java.awt.Color(57, 54, 54));
+        letDesviacionMedia.setText("Desviación media:");
+        fondoPanel.add(letDesviacionMedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, -1));
+
+        letDesviacionTipica.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        letDesviacionTipica.setForeground(new java.awt.Color(57, 54, 54));
+        letDesviacionTipica.setText("Desviación típica:");
+        fondoPanel.add(letDesviacionTipica, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 440, -1, -1));
+
+        btnImprimir.setBackground(new java.awt.Color(202, 183, 183));
+        btnImprimir.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        btnImprimir.setForeground(new java.awt.Color(57, 54, 54));
+        btnImprimir.setText("Imprimir");
+        btnImprimir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
+        btnImprimir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimirActionPerformed(evt);
+            }
+        });
+        fondoPanel.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 80, -1));
+
+        letFondoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
+        letFondoAgrupados.setOpaque(true);
+        fondoPanel.add(letFondoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 530));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(fondoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(fondoPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -178,6 +182,10 @@ public class VistaAgrupados extends javax.swing.JFrame {
     private void btnCalcularAgrupadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularAgrupadosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCalcularAgrupadosActionPerformed
+
+    private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,14 +224,20 @@ public class VistaAgrupados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCalcularAgrupados;
+    private javax.swing.JButton btnImprimir;
     public javax.swing.JButton btnLimpiarAgrupados;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPanel fondoPanel;
+    private javax.swing.JLabel letDesviacionMedia;
+    private javax.swing.JLabel letDesviacionTipica;
+    private javax.swing.JLabel letFondoAgrupados;
+    private javax.swing.JLabel letFrecuencias;
+    private javax.swing.JLabel letLimInferiores;
+    private javax.swing.JLabel letLimSuperiores;
+    private javax.swing.JLabel letMarcaClase;
+    private javax.swing.JLabel letTituloAgrupados;
+    private javax.swing.JLabel letVarianza;
+    private javax.swing.JSeparator separador;
+    private javax.swing.JScrollPane tablaAgrupados;
     public javax.swing.JTable tblAgrupados;
     public javax.swing.JTextField txtFrecuencias;
     public javax.swing.JTextField txtLimInferiores;
