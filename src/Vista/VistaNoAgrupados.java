@@ -73,6 +73,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         btnImprimir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        btnRegresarNoAgrupados = new javax.swing.JButton();
         letFondoNoAgrupados = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -161,6 +162,13 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/3.png"))); // NOI18N
         fondoPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 120, 60));
 
+        btnRegresarNoAgrupados.setBackground(new java.awt.Color(202, 183, 183));
+        btnRegresarNoAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        btnRegresarNoAgrupados.setForeground(new java.awt.Color(57, 54, 54));
+        btnRegresarNoAgrupados.setText("Regresar");
+        btnRegresarNoAgrupados.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
+        fondoPanel.add(btnRegresarNoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 80, 30));
+
         letFondoNoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
         letFondoNoAgrupados.setOpaque(true);
         fondoPanel.add(letFondoNoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 530));
@@ -234,6 +242,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnImprimir;
     private javax.swing.JButton btnLimpiar;
+    private javax.swing.JButton btnRegresarNoAgrupados;
     private javax.swing.JPanel fondoPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

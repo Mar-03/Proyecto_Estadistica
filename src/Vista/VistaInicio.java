@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Vista;
 
-/**
- *
- * @author Cindy Ruano
- */
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class VistaInicio extends javax.swing.JFrame {
 
     /**
@@ -15,6 +13,9 @@ public class VistaInicio extends javax.swing.JFrame {
      */
     public VistaInicio() {
         initComponents();
+        
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -69,6 +70,12 @@ public class VistaInicio extends javax.swing.JFrame {
         btnNoInicio.setForeground(new java.awt.Color(57, 54, 54));
         btnNoInicio.setText("NO");
         btnNoInicio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
+        btnNoInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnNoInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNoInicioActionPerformed(evt);
+            }
+        });
         fondoPanel.add(btnNoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 80, -1));
 
         separadorInicio.setForeground(new java.awt.Color(255, 255, 255));
@@ -96,8 +103,30 @@ public class VistaInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSiInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiInicioActionPerformed
-        // TODO add your handling code here:
+     
+//        btnSiInicio.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                // Mostrar el JFrame DatosAgrupados al presionar "SI"
+//                VistaAgrupados datosAgrupados = new VistaAgrupados(VistaInicio.this);
+//                datosAgrupados.setVisible(true);
+//                setVisible(false); // Ocultar VistaInicio
+//            }
+//        });
     }//GEN-LAST:event_btnSiInicioActionPerformed
+
+    private void btnNoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoInicioActionPerformed
+        // TODO add your handling code here:
+        
+//        btnNoInicio.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                // Mostrar el JFrame DatosNoAgrupados al presionar "NO"
+//                VistaNoAgrupados datosNoAgrupados = new VistaNoAgrupados();
+//                datosNoAgrupados.setVisible(true);
+//            }
+//        });
+    }//GEN-LAST:event_btnNoInicioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,8 +164,8 @@ public class VistaInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnNoInicio;
-    private javax.swing.JButton btnSiInicio;
+    public javax.swing.JButton btnNoInicio;
+    public javax.swing.JButton btnSiInicio;
     private javax.swing.JPanel fondoPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel letFondoInicio;
