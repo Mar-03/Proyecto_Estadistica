@@ -30,7 +30,7 @@ public class VistaInicio extends javax.swing.JFrame {
         btnSiInicio = new javax.swing.JButton();
         btnNoInicio = new javax.swing.JButton();
         separadorInicio = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
+        imagen = new javax.swing.JLabel();
         letFondoInicio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,8 +78,8 @@ public class VistaInicio extends javax.swing.JFrame {
         separadorInicio.setForeground(new java.awt.Color(255, 255, 255));
         fondoPanel.add(separadorInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 360, 20));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/2.png"))); // NOI18N
-        fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 270, 130));
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/2.png"))); // NOI18N
+        fondoPanel.add(imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 270, 130));
 
         letFondoInicio.setBackground(new java.awt.Color(235, 200, 200));
         letFondoInicio.setOpaque(true);
@@ -152,7 +152,7 @@ public class VistaInicio extends javax.swing.JFrame {
     public javax.swing.JButton btnNoInicio;
     public javax.swing.JButton btnSiInicio;
     private javax.swing.JPanel fondoPanel;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel imagen;
     private javax.swing.JLabel letFondoInicio;
     private javax.swing.JLabel letPregundaInicio;
     private javax.swing.JLabel letTituloInicio;

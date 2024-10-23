@@ -72,7 +72,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         btnLimpiar = new javax.swing.JButton();
         btnImprimir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        imagen = new javax.swing.JLabel();
         btnRegresarNoAgrupados = new javax.swing.JButton();
         letFondoNoAgrupados = new javax.swing.JLabel();
 
@@ -159,8 +159,8 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         jLabel1.setText("ACA VA RANGO, DESVIACIÓN MEDIA Y DESVIACIÓN TÍPICA O ESTÁNDAR");
         fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/3.png"))); // NOI18N
-        fondoPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 120, 60));
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/3.png"))); // NOI18N
+        fondoPanel.add(imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 120, 60));
 
         btnRegresarNoAgrupados.setBackground(new java.awt.Color(202, 183, 183));
         btnRegresarNoAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
@@ -257,8 +257,8 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnRegresarNoAgrupados;
     private javax.swing.JPanel fondoPanel;
+    private javax.swing.JLabel imagen;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel letDatos;
     private javax.swing.JLabel letFondoNoAgrupados;
     private javax.swing.JLabel letTituloNoAgrupados;

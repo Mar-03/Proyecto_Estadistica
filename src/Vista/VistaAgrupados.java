@@ -37,6 +37,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         fondoPanel = new javax.swing.JPanel();
         letTituloAgrupados = new javax.swing.JLabel();
         letLimSuperiores = new javax.swing.JLabel();
@@ -55,9 +56,15 @@ public class VistaAgrupados extends javax.swing.JFrame {
         letDesviacionMedia = new javax.swing.JLabel();
         letDesviacionTipica = new javax.swing.JLabel();
         btnImprimir = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        imagen = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         letFondoAgrupados = new javax.swing.JLabel();
+
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -166,8 +173,8 @@ public class VistaAgrupados extends javax.swing.JFrame {
         });
         fondoPanel.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, 80, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/3.png"))); // NOI18N
-        fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 140, 60));
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/3.png"))); // NOI18N
+        fondoPanel.add(imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 140, 60));
 
         btnRegresar.setBackground(new java.awt.Color(202, 183, 183));
         btnRegresar.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
@@ -180,6 +187,30 @@ public class VistaAgrupados extends javax.swing.JFrame {
             }
         });
         fondoPanel.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 80, -1));
+
+        jLabel1.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 50, 20));
+
+        jLabel3.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fondoPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 50, 20));
+
+        jLabel4.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fondoPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, 50, 20));
+
+        jLabel5.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fondoPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, 50, 20));
 
         letFondoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
         letFondoAgrupados.setOpaque(true);
@@ -256,7 +287,12 @@ public class VistaAgrupados extends javax.swing.JFrame {
     public javax.swing.JButton btnLimpiarAgrupados;
     public javax.swing.JButton btnRegresar;
     private javax.swing.JPanel fondoPanel;
+    private javax.swing.JLabel imagen;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel letDesviacionMedia;
     private javax.swing.JLabel letDesviacionTipica;
     private javax.swing.JLabel letFondoAgrupados;
