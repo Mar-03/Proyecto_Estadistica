@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class ModeloNoAgrupados {
-
+// metodo para calcular la medida que despues sera llamado para el controlador 
     public double calcularMedia(double[] datos) {
 
         double suma = 0;
@@ -18,7 +18,7 @@ public class ModeloNoAgrupados {
         }
         return suma / datos.length;
     }
-
+// metodo para calcular la mediana 
     public double calcularMediana(double[] datos) {
         Arrays.sort(datos);
 
@@ -30,7 +30,7 @@ public class ModeloNoAgrupados {
             return datos[mitad];
         }
     }
-
+// metodo para calcular media ponderada 
     public double calcularMediaPonderada(double[] datos, double[] numeros) {
         double suma = 0;
         double numero = 0;
@@ -40,7 +40,7 @@ public class ModeloNoAgrupados {
         }
         return suma / numero;
     }
-
+// metodo para calcular moda datos simples
     public double calcularModa(double[] datos) {
         Map<Double, Integer> frecuencia = new HashMap<>();
         for (double dato : datos) {
