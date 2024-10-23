@@ -36,12 +36,12 @@ public class ModeloInicio {
     private void mostrarDatosAgrupados() {
         VistaAgrupados datosAgrupados = new VistaAgrupados(vistaInicio);
         datosAgrupados.setVisible(true);
-        vistaInicio.setVisible(false); // Ocultar VistaInicio
+        vistaInicio.setVisible(false);
     }
 
     private void mostrarDatosNoAgrupados() {
         VistaNoAgrupados datosNoAgrupados = new VistaNoAgrupados();
         datosNoAgrupados.setVisible(true);
-        vistaInicio.setVisible(false); // Ocultar VistaInicio
+        vistaInicio.setVisible(false);
     }
 }

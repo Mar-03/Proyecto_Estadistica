@@ -8,9 +8,6 @@ import java.awt.event.ActionListener;
 
 public class VistaInicio extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaInicio
-     */
     public VistaInicio() {
         initComponents();
         
@@ -104,28 +101,16 @@ public class VistaInicio extends javax.swing.JFrame {
 
     private void btnSiInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiInicioActionPerformed
      
-//        btnSiInicio.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                // Mostrar el JFrame DatosAgrupados al presionar "SI"
-//                VistaAgrupados datosAgrupados = new VistaAgrupados(VistaInicio.this);
-//                datosAgrupados.setVisible(true);
-//                setVisible(false); // Ocultar VistaInicio
-//            }
-//        });
+//        VistaAgrupados va = new VistaAgrupados();
+//        va.setVisible(true);
+//        this.setVisible(false);
     }//GEN-LAST:event_btnSiInicioActionPerformed
 
     private void btnNoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoInicioActionPerformed
-        // TODO add your handling code here:
         
-//        btnNoInicio.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                // Mostrar el JFrame DatosNoAgrupados al presionar "NO"
-//                VistaNoAgrupados datosNoAgrupados = new VistaNoAgrupados();
-//                datosNoAgrupados.setVisible(true);
-//            }
-//        });
+        VistaNoAgrupados vna = new VistaNoAgrupados();
+        vna.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnNoInicioActionPerformed
 
     /**

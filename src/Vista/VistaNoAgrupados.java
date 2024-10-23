@@ -167,6 +167,11 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         btnRegresarNoAgrupados.setForeground(new java.awt.Color(57, 54, 54));
         btnRegresarNoAgrupados.setText("Regresar");
         btnRegresarNoAgrupados.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
+        btnRegresarNoAgrupados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarNoAgrupadosActionPerformed(evt);
+            }
+        });
         fondoPanel.add(btnRegresarNoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 80, 30));
 
         letFondoNoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
@@ -202,6 +207,14 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     private void txtDatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDatoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDatoActionPerformed
+
+    private void btnRegresarNoAgrupadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarNoAgrupadosActionPerformed
+        // TODO add your handling code here:
+        
+        VistaInicio vi = new VistaInicio();
+        vi.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnRegresarNoAgrupadosActionPerformed
 
     /**
      * @param args the command line arguments

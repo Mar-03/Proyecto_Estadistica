@@ -1,12 +1,18 @@
 package Vista;
 
 import Controlador.ControladorAgrupados;
+import Vista.VistaInicio;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class VistaAgrupados extends javax.swing.JFrame {
+
     private JFrame parentFrame;
 
     /**
@@ -17,26 +23,10 @@ public class VistaAgrupados extends javax.swing.JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
     }
-
-//    public void addRegresarAgrupadosListener(ActionListener listenregresarAgrupados) {
-//        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 //
-//        btnRegresarAgrupados.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                parentFrame.setVisible(true);
-//                dispose();
-//            }
-//        });
-//        add(btnRegresarAgrupados);
+//    public void addRegresarListener(ActionListener listenregresar) {
+//        btnRegresar.addActionListener(listenregresar);
 //    }
-    
-//    VistaAgrupados() {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-//        Modelo.ModeloAgrupados modelo = new ModeloAgrupados(this);
-//        Controlador.ControladorAgrupados controlador = new ControladorAgrupados(modelo);
-//        setControlador(controlador);
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -66,7 +56,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
         letDesviacionTipica = new javax.swing.JLabel();
         btnImprimir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        btnRegresarAgrupados = new javax.swing.JButton();
+        btnRegresar = new javax.swing.JButton();
         letFondoAgrupados = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -179,17 +169,17 @@ public class VistaAgrupados extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/3.png"))); // NOI18N
         fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 140, 60));
 
-        btnRegresarAgrupados.setBackground(new java.awt.Color(202, 183, 183));
-        btnRegresarAgrupados.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        btnRegresarAgrupados.setForeground(new java.awt.Color(57, 54, 54));
-        btnRegresarAgrupados.setText("Regresar");
-        btnRegresarAgrupados.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
-        btnRegresarAgrupados.addActionListener(new java.awt.event.ActionListener() {
+        btnRegresar.setBackground(new java.awt.Color(202, 183, 183));
+        btnRegresar.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        btnRegresar.setForeground(new java.awt.Color(57, 54, 54));
+        btnRegresar.setText("Regresar");
+        btnRegresar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegresarAgrupadosActionPerformed(evt);
+                btnRegresarActionPerformed(evt);
             }
         });
-        fondoPanel.add(btnRegresarAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 80, -1));
+        fondoPanel.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 80, -1));
 
         letFondoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
         letFondoAgrupados.setOpaque(true);
@@ -217,17 +207,13 @@ public class VistaAgrupados extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnImprimirActionPerformed
 
-    private void btnRegresarAgrupadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarAgrupadosActionPerformed
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
 
-        btnRegresarAgrupados.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                parentFrame.setVisible(true);
-                dispose(); 
-            }
-        });
-        add(btnRegresarAgrupados);
-    }//GEN-LAST:event_btnRegresarAgrupadosActionPerformed
+        VistaInicio vi = new VistaInicio();
+        vi.setVisible(true);
+        this.setVisible(false);
+
+    }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,7 +254,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
     public javax.swing.JButton btnCalcularAgrupados;
     private javax.swing.JButton btnImprimir;
     public javax.swing.JButton btnLimpiarAgrupados;
-    public javax.swing.JButton btnRegresarAgrupados;
+    public javax.swing.JButton btnRegresar;
     private javax.swing.JPanel fondoPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel letDesviacionMedia;
