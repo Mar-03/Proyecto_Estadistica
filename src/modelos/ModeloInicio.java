@@ -34,7 +34,7 @@ public class ModeloInicio {
     }
 
     private void mostrarDatosAgrupados() {
-        VistaAgrupados datosAgrupados = new VistaAgrupados(vistaInicio);
+        VistaAgrupados datosAgrupados = new VistaAgrupados();
         datosAgrupados.setVisible(true);
         vistaInicio.setVisible(false);
     }

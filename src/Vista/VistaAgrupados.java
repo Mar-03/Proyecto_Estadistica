@@ -21,13 +21,14 @@ public class VistaAgrupados extends javax.swing.JFrame {
     /**
      * Creates new form VistaAgrupados
      */
-    public VistaAgrupados(JFrame parentFrame) {
+    public VistaAgrupados() {
         initComponents();
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
          ModeloAgrupados modelo = new ModeloAgrupados();
      ControladorAgrupados controlador = new ControladorAgrupados(this,modelo);
-    
+      controlador.calcularNoAgrupados();
+   
     }
 
     public JLabel getLetDesviacionMedia() {
@@ -117,7 +118,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
         btnRegresar = new javax.swing.JButton();
         lblDesviacionMedia = new javax.swing.JLabel();
         lblDesviacionTipica = new javax.swing.JLabel();
-        lblMarca = new javax.swing.JLabel();
+        lblPromedio = new javax.swing.JLabel();
         lblVarianza = new javax.swing.JLabel();
         letFondoAgrupados = new javax.swing.JLabel();
 
@@ -210,7 +211,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
 
         letMarcaClase.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         letMarcaClase.setForeground(new java.awt.Color(57, 54, 54));
-        letMarcaClase.setText("Marca de clase:");
+        letMarcaClase.setText("Media");
         fondoPanel.add(letMarcaClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
 
         letDesviacionMedia.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
@@ -262,11 +263,11 @@ public class VistaAgrupados extends javax.swing.JFrame {
         lblDesviacionTipica.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         fondoPanel.add(lblDesviacionTipica, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 50, 20));
 
-        lblMarca.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        lblMarca.setForeground(new java.awt.Color(255, 255, 255));
-        lblMarca.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMarca.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        fondoPanel.add(lblMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, 50, 20));
+        lblPromedio.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        lblPromedio.setForeground(new java.awt.Color(255, 255, 255));
+        lblPromedio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPromedio.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fondoPanel.add(lblPromedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, 50, 20));
 
         lblVarianza.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         lblVarianza.setForeground(new java.awt.Color(255, 255, 255));
@@ -310,7 +311,9 @@ public class VistaAgrupados extends javax.swing.JFrame {
 
     private void btnLimpiarAgrupadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAgrupadosActionPerformed
        
-        
+        txtFrecuencias.setText("");
+        txtLimInferiores.setText("");
+        txtLimSuperiores.setText("");
     }//GEN-LAST:event_btnLimpiarAgrupadosActionPerformed
 
     /**
@@ -358,7 +361,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel lblDesviacionMedia;
     public javax.swing.JLabel lblDesviacionTipica;
-    public javax.swing.JLabel lblMarca;
+    public javax.swing.JLabel lblPromedio;
     public javax.swing.JLabel lblVarianza;
     private javax.swing.JLabel letDesviacionMedia;
     private javax.swing.JLabel letDesviacionTipica;

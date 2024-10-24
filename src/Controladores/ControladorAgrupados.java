@@ -32,31 +32,31 @@ public class ControladorAgrupados {
 
     public void calcularNoAgrupados() {
     try {
-        // Obtener y parsear los datos de la vista
+        
         double[] superiores = parsearLimites(vista.txtLimSuperiores.getText());
         double[] inferiores = parsearLimites(vista.txtLimInferiores.getText());
         int[] frecuencias = parsearFrecuencias(vista.txtFrecuencias.getText());
 
-        // Validar las longitudes de los arreglos
+        
         if (superiores.length != inferiores.length || superiores.length != frecuencias.length) {
             return;
         }
 
-        // Establecer los datos en el modelo
+        
         modelo.setDatos(superiores, inferiores, frecuencias);
 
-        // Calcular estadísticas
+        
         double media = modelo.calcularMedia();
         double desviacionMedia = modelo.calcularDesviacionMedia();
         double desviacionTipica = modelo.calcularDesviacionTipica();
         double varianza = modelo.calcularVarianza();
         List<Double> marcasDeClase = modelo.calcularMarcasDeClase();
 
-        // Limpiar la tabla de resultados antes de mostrar nuevos datos
+       
         limpiarTablaResultados();
 
-        // Llenar la tabla con los resultados
-        for (int i = 0; i < marcasDeClase.size(); i++) {
+        
+       for (int i = 0; i < marcasDeClase.size(); i++) {
             double fPorX = frecuencias[i] * marcasDeClase.get(i);
             double xMenosMedia = Math.abs(marcasDeClase.get(i) - media);
             double xMenosMediaCuadrado = Math.pow(xMenosMedia, 2);
@@ -72,15 +72,15 @@ public class ControladorAgrupados {
             vista.tblAgrupados.setValueAt(fPorXMenosMediaCuadrado, i, 6);
         }
 
-        // Mostrar resultados en los JLabels
+        
         vista.lblDesviacionMedia.setText(String.format("%.2f", desviacionMedia));
         vista.lblDesviacionTipica.setText(String.format("%.2f", desviacionTipica));
         vista.lblVarianza.setText(String.format("%.2f", varianza));
-        vista.lblMarca.setText(String.format("%.2f", marcasDeClase));
+        vista.lblPromedio.setText(String.format("%.2f", media));
 
     } catch (NumberFormatException ex) {
-        // Mostrar un mensaje en caso de error de formato
-        JOptionPane.showMessageDialog(vista, "Por favor, ingrese números válidos.", "Error", JOptionPane.ERROR_MESSAGE);
+        
+       
     }
 }
 

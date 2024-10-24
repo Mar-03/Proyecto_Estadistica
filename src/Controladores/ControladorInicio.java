@@ -21,7 +21,7 @@ public class ControladorInicio {
         vistaInicio.btnSiInicio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                VistaAgrupados datosAgrupados = new VistaAgrupados(vistaInicio);
+                VistaAgrupados datosAgrupados = new VistaAgrupados();
                 datosAgrupados.setVisible(true);
                 vistaInicio.setVisible(false); 
             }
