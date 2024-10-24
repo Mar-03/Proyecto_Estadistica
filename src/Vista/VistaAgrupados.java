@@ -211,7 +211,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
 
         letMarcaClase.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         letMarcaClase.setForeground(new java.awt.Color(57, 54, 54));
-        letMarcaClase.setText("Media");
+        letMarcaClase.setText("Promedio: ");
         fondoPanel.add(letMarcaClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
 
         letDesviacionMedia.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
@@ -267,13 +267,13 @@ public class VistaAgrupados extends javax.swing.JFrame {
         lblPromedio.setForeground(new java.awt.Color(255, 255, 255));
         lblPromedio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPromedio.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        fondoPanel.add(lblPromedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, 50, 20));
+        fondoPanel.add(lblPromedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 50, 20));
 
         lblVarianza.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         lblVarianza.setForeground(new java.awt.Color(255, 255, 255));
         lblVarianza.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblVarianza.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        fondoPanel.add(lblVarianza, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, 50, 20));
+        fondoPanel.add(lblVarianza, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 50, 20));
 
         letFondoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
         letFondoAgrupados.setOpaque(true);

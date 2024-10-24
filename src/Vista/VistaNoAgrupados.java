@@ -4,6 +4,7 @@ package Vista;
 import Controladores.ControladorNoAgrupados;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -17,6 +18,8 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
    
     public VistaNoAgrupados() {
         initComponents();
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setLocationRelativeTo(null);
     ModeloNoAgrupados modelo = new ModeloNoAgrupados();
      ControladorNoAgrupados controlador = new ControladorNoAgrupados(this,modelo);
      
@@ -90,7 +93,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Rango", "Desviacion media", "Desviacion tipica"
+                "Rango", "Desviación Media", "Desviación Típica"
             }
         ) {
             boolean[] canEdit = new boolean [] {
