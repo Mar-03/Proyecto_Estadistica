@@ -1,4 +1,3 @@
-
 package Vista;
 
 import javax.swing.JButton;
@@ -10,7 +9,7 @@ public class VistaInicio extends javax.swing.JFrame {
 
     public VistaInicio() {
         initComponents();
-        
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
     }
@@ -100,14 +99,14 @@ public class VistaInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSiInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiInicioActionPerformed
-     
-       VistaAgrupados va = new VistaAgrupados();
+
+        VistaAgrupados va  = new VistaAgrupados();
         va.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnSiInicioActionPerformed
 
     private void btnNoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoInicioActionPerformed
-        
+
         VistaNoAgrupados vna = new VistaNoAgrupados();
         vna.setVisible(true);
         this.setVisible(false);
