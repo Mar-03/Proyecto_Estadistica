@@ -1,4 +1,4 @@
-package Controlador;
+package Controladores;
 
 import Vista.VistaInicio;
 

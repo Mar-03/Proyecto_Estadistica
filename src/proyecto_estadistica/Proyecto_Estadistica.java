@@ -1,11 +1,11 @@
 package proyecto_estadistica;
 
-import Controlador.ControladorInicio;
-import Controlador.ControladorNoAgrupados;
-import Modelo.ModeloInicio;
+import Controladores.ControladorInicio;
+import Controladores.ControladorNoAgrupados;
+import modelos.ModeloInicio;
 import Vista.VistaInicio;
 import Vista.VistaNoAgrupados;
-import modelo.ModeloNoAgrupados;
+import modelos.ModeloNoAgrupados;
 
 public class Proyecto_Estadistica {
 

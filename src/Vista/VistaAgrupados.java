@@ -1,6 +1,6 @@
 package Vista;
 
-import Controlador.ControladorAgrupados;
+import Controladores.ControladorAgrupados;
 import Vista.VistaInicio;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -231,7 +231,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCalcularAgrupadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularAgrupadosActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnCalcularAgrupadosActionPerformed
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed

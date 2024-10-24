@@ -1,5 +1,6 @@
 package Vista;
 
+
 import java.awt.event.ActionListener;
 
 public class VistaNoAgrupados extends javax.swing.JFrame {
@@ -10,11 +11,10 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     public VistaNoAgrupados() {
         initComponents();
         setLocationRelativeTo(null);
-
-    }
-
-    public void addCalcularListener(ActionListener listencalcular) {
-        btnCalcular.addActionListener(listencalcular);
+    
+           }
+ public void addCalcularListener(ActionListener listenCalcular) {
+        btnCalcular.addActionListener(listenCalcular);
     }
 
     public void addLimpiarListener(ActionListener listenLimpiar) {
@@ -29,26 +29,24 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         return txtDato.getText();
     }
 
-    public void setMediaAritmetica(String valor) {
+    public void setRango(String valor) {
         tblNoAgrupados.setValueAt(valor, 0, 0);
     }
 
-    public void setMediaPonderada(String valor) {
+    public void setDesviacionMedia(String valor) {
         tblNoAgrupados.setValueAt(valor, 0, 1);
     }
 
-    public void setMediana(String valor) {
+    public void setDesviacionTipica(String valor) {
         tblNoAgrupados.setValueAt(valor, 0, 2);
-    }
-
-    public void setModa(String valor) {
-        tblNoAgrupados.setValueAt(valor, 0, 3);
     }
 
     public void limpiarCampos() {
         txtDato.setText("");
-        for (int i = 0; i < tblNoAgrupados.getColumnCount(); i++) {
-            tblNoAgrupados.setValueAt("", 0, i);
+        for (int i = 0; i < tblNoAgrupados.getRowCount(); i++) {
+            for (int j = 0; j < tblNoAgrupados.getColumnCount(); j++) {
+                tblNoAgrupados.setValueAt("", i, j);
+            }
         }
     }
 
@@ -71,7 +69,6 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         btnCalcular = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
         btnImprimir = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         imagen = new javax.swing.JLabel();
         btnRegresarNoAgrupados = new javax.swing.JButton();
         letFondoNoAgrupados = new javax.swing.JLabel();
@@ -90,16 +87,24 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         tblNoAgrupados.setForeground(new java.awt.Color(57, 54, 54));
         tblNoAgrupados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Media Aritmética", "Media Ponderada", "Mediana", "Moda"
+                "Rango", "Desviacion media", "Desviacion tipica"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblNoAgrupados.setSelectionForeground(new java.awt.Color(57, 54, 54));
         tablaNoAgrupados.setViewportView(tblNoAgrupados);
 
@@ -156,9 +161,6 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         });
         fondoPanel.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 75, -1));
 
-        jLabel1.setText("ACA VA RANGO, DESVIACIÓN MEDIA Y DESVIACIÓN TÍPICA O ESTÁNDAR");
-        fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, -1, -1));
-
         imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/3.png"))); // NOI18N
         fondoPanel.add(imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 120, 60));
 
@@ -197,7 +199,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
@@ -214,6 +216,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         VistaInicio vi = new VistaInicio();
         vi.setVisible(true);
         this.setVisible(false);
+        
     }//GEN-LAST:event_btnRegresarNoAgrupadosActionPerformed
 
     /**
@@ -247,6 +250,8 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VistaNoAgrupados().setVisible(true);
+                
+                
             }
         });
     }
@@ -258,7 +263,6 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     private javax.swing.JButton btnRegresarNoAgrupados;
     private javax.swing.JPanel fondoPanel;
     private javax.swing.JLabel imagen;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel letDatos;
     private javax.swing.JLabel letFondoNoAgrupados;
     private javax.swing.JLabel letTituloNoAgrupados;
