@@ -28,40 +28,14 @@ numericos en varios metodos
         }
     }
    public double CalcularRango(){
+         Collections.sort(datos);
    double max = Collections.max(datos);
    double min = Collections.min(datos);
    return  max-min;
    
    }
    
-   /*metodo para calcular desviacion tipica 
-   aqui use el math.pow que es para elevar y use el ciclo for para
-   que primero encuentre el promedio despues sume los datos menos el 
-   promedio y lo eleve al cuadrado
-   al final para que me de la desviacion tipica puese un sqrt que es para
-   que haga una raiz cuadrada del resultado de sumacuadrados  dividido 
-   la cantidad de numeros que se hayan agregado
-   */
-   public double CalculoDesviacionTipica(){
-    int numeros = datos.size();
-    if (numeros ==0 ) return 0;
-    Double sumasimples = 0.0; 
-       Double sumarCuadrados =0.0;
-       for(double dato: datos) {
-        sumasimples+=dato; 
-       }
-       double promedio = sumasimples /numeros ;
-        for (double dato: datos){
-   
- 
-        sumarCuadrados +=Math.pow(dato - promedio,2 );
-        
-        
-        }
-       
-        double desviaciontipica = Math.sqrt(sumarCuadrados /numeros);
-   return desviaciontipica;
-   }
+  
     /**
      Metodo para desviacion media simepre con datos simples
      * ahora dm es desviacion media abreviado donde primero ecuentra el
@@ -80,8 +54,35 @@ numericos en varios metodos
     double promedios = suma/cantidadnumeros;
     double sumadm =0;
     for (double dato : datos){
-    sumadm = Math.abs(dato - promedios);
+    sumadm += Math.abs(dato - promedios);
     }
-     return sumadm/datos.size();
+     return sumadm/cantidadnumeros;
      }
+      /*metodo para calcular desviacion tipica 
+   aqui use el math.pow que es para elevar y use el ciclo for para
+   que primero encuentre el promedio despues sume los datos menos el 
+   promedio y lo eleve al cuadrado
+   al final para que me de la desviacion tipica puese un sqrt que es para
+   que haga una raiz cuadrada del resultado de sumacuadrados  dividido 
+   la cantidad de numeros que se hayan agregado
+   */
+   public double CalculoDesviacionTipica(){
+    int numeros = datos.size();
+    if (numeros ==0 ) return 0;
+    Double sumasimples = 0.0;
+    
+       for(double dato: datos) {
+        sumasimples+=dato; 
+       }
+       double promedio = sumasimples /numeros ;
+       Double sumarCuadrados =0.0;
+        for (double dato: datos){
+   
+        sumarCuadrados +=Math.pow(dato - promedio,2 );
+        
+        
+        }
+       
+        return Math.sqrt(sumarCuadrados / numeros);
+   }
 }

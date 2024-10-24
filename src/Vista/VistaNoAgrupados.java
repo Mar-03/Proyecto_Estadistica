@@ -1,54 +1,50 @@
 package Vista;
 
 
+import Controladores.ControladorNoAgrupados;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import modelos.ModeloNoAgrupados;
 
 public class VistaNoAgrupados extends javax.swing.JFrame {
 
     /**
      * Creates new form VistaNoAgrupados
      */
+   
     public VistaNoAgrupados() {
         initComponents();
-        setLocationRelativeTo(null);
+    ModeloNoAgrupados modelo = new ModeloNoAgrupados();
+     ControladorNoAgrupados controlador = new ControladorNoAgrupados(this,modelo);
+     
+    }
+     
+    public JTextField getTxtDato() {
+    return txtDato;
+}
+
+    public JTable getTblNoAgrupados() {
+        return tblNoAgrupados;
+    }
+
     
-           }
- public void addCalcularListener(ActionListener listenCalcular) {
-        btnCalcular.addActionListener(listenCalcular);
-    }
-
-    public void addLimpiarListener(ActionListener listenLimpiar) {
-        btnLimpiar.addActionListener(listenLimpiar);
-    }
-
-    public void addImprimirListener(ActionListener listenImprimir) {
-        btnImprimir.addActionListener(listenImprimir);
-    }
-
-    public String getDatos() {
-        return txtDato.getText();
-    }
-
-    public void setRango(String valor) {
-        tblNoAgrupados.setValueAt(valor, 0, 0);
-    }
-
-    public void setDesviacionMedia(String valor) {
-        tblNoAgrupados.setValueAt(valor, 0, 1);
-    }
-
-    public void setDesviacionTipica(String valor) {
-        tblNoAgrupados.setValueAt(valor, 0, 2);
-    }
+   
 
     public void limpiarCampos() {
-        txtDato.setText("");
         for (int i = 0; i < tblNoAgrupados.getRowCount(); i++) {
             for (int j = 0; j < tblNoAgrupados.getColumnCount(); j++) {
                 tblNoAgrupados.setValueAt("", i, j);
             }
         }
+        
     }
+
+    
+
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -203,7 +199,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        // TODO add your handling code here:
+         txtDato.setText(""); 
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void txtDatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDatoActionPerformed
@@ -257,9 +253,9 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalcular;
+    public javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnImprimir;
-    private javax.swing.JButton btnLimpiar;
+    public javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnRegresarNoAgrupados;
     private javax.swing.JPanel fondoPanel;
     private javax.swing.JLabel imagen;
@@ -268,8 +264,8 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     private javax.swing.JLabel letTituloNoAgrupados;
     private javax.swing.JSeparator separador;
     private javax.swing.JScrollPane tablaNoAgrupados;
-    private javax.swing.JTable tblNoAgrupados;
-    private javax.swing.JTextField txtDato;
+    public javax.swing.JTable tblNoAgrupados;
+    public javax.swing.JTextField txtDato;
     // End of variables declaration//GEN-END:variables
 
 }

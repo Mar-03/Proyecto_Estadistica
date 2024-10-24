@@ -10,10 +10,13 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import modelos.ModeloAgrupados;
 
 public class VistaAgrupados extends javax.swing.JFrame {
 
-    private JFrame parentFrame;
 
     /**
      * Creates new form VistaAgrupados
@@ -22,11 +25,65 @@ public class VistaAgrupados extends javax.swing.JFrame {
         initComponents();
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
+         ModeloAgrupados modelo = new ModeloAgrupados();
+     ControladorAgrupados controlador = new ControladorAgrupados(this,modelo);
+    
     }
-//
-//    public void addRegresarListener(ActionListener listenregresar) {
-//        btnRegresar.addActionListener(listenregresar);
-//    }
+
+    public JLabel getLetDesviacionMedia() {
+        return letDesviacionMedia;
+    }
+
+    public JLabel getLetDesviacionTipica() {
+        return letDesviacionTipica;
+    }
+
+    public JLabel getLetFondoAgrupados() {
+        return letFondoAgrupados;
+    }
+
+    public JLabel getLetFrecuencias() {
+        return letFrecuencias;
+    }
+
+    public JLabel getLetLimInferiores() {
+        return letLimInferiores;
+    }
+
+    public JLabel getLetLimSuperiores() {
+        return letLimSuperiores;
+    }
+
+    
+    public JTable getTblAgrupados() {
+        return tblAgrupados;
+    }
+
+    public JLabel getLblDesviacionMedia() {
+        return lblDesviacionMedia;
+    }
+
+    public JLabel getLblDesviacionTipica() {
+        return lblDesviacionTipica;
+    }
+
+    public JLabel getLblVarianza() {
+        return lblVarianza;
+    }
+
+    public JLabel getLetMarcaClase() {
+        return letMarcaClase;
+    }
+
+   
+    public JTextField getTxtLimInferiores() {
+        return txtLimInferiores;
+    }
+
+    public JTextField getTxtLimSuperiores() {
+        return txtLimSuperiores;
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -58,10 +115,10 @@ public class VistaAgrupados extends javax.swing.JFrame {
         btnImprimir = new javax.swing.JButton();
         imagen = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblDesviacionMedia = new javax.swing.JLabel();
+        lblDesviacionTipica = new javax.swing.JLabel();
+        lblMarca = new javax.swing.JLabel();
+        lblVarianza = new javax.swing.JLabel();
         letFondoAgrupados = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
@@ -112,7 +169,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
         tblAgrupados.setSelectionForeground(new java.awt.Color(57, 54, 54));
         tablaAgrupados.setViewportView(tblAgrupados);
 
-        fondoPanel.add(tablaAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 236, 530, 147));
+        fondoPanel.add(tablaAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 530, 147));
         fondoPanel.add(txtLimSuperiores, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 124, 250, -1));
         fondoPanel.add(txtLimInferiores, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 158, 250, -1));
         fondoPanel.add(txtFrecuencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 186, 250, -1));
@@ -134,6 +191,11 @@ public class VistaAgrupados extends javax.swing.JFrame {
         btnLimpiarAgrupados.setForeground(new java.awt.Color(57, 54, 54));
         btnLimpiarAgrupados.setText("Limpiar");
         btnLimpiarAgrupados.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.lightGray));
+        btnLimpiarAgrupados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarAgrupadosActionPerformed(evt);
+            }
+        });
         fondoPanel.add(btnLimpiarAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 80, -1));
 
         separador.setForeground(new java.awt.Color(255, 255, 255));
@@ -144,7 +206,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
         letVarianza.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         letVarianza.setForeground(new java.awt.Color(57, 54, 54));
         letVarianza.setText("Varianza:");
-        fondoPanel.add(letVarianza, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, -1, -1));
+        fondoPanel.add(letVarianza, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 440, -1, -1));
 
         letMarcaClase.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
         letMarcaClase.setForeground(new java.awt.Color(57, 54, 54));
@@ -188,29 +250,29 @@ public class VistaAgrupados extends javax.swing.JFrame {
         });
         fondoPanel.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 80, -1));
 
-        jLabel1.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        fondoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 50, 20));
+        lblDesviacionMedia.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        lblDesviacionMedia.setForeground(new java.awt.Color(255, 255, 255));
+        lblDesviacionMedia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDesviacionMedia.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fondoPanel.add(lblDesviacionMedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 50, 20));
 
-        jLabel3.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        fondoPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 50, 20));
+        lblDesviacionTipica.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        lblDesviacionTipica.setForeground(new java.awt.Color(255, 255, 255));
+        lblDesviacionTipica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDesviacionTipica.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fondoPanel.add(lblDesviacionTipica, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 50, 20));
 
-        jLabel4.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        fondoPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, 50, 20));
+        lblMarca.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        lblMarca.setForeground(new java.awt.Color(255, 255, 255));
+        lblMarca.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMarca.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fondoPanel.add(lblMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, 50, 20));
 
-        jLabel5.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        fondoPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, 50, 20));
+        lblVarianza.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
+        lblVarianza.setForeground(new java.awt.Color(255, 255, 255));
+        lblVarianza.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblVarianza.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fondoPanel.add(lblVarianza, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, 50, 20));
 
         letFondoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
         letFondoAgrupados.setOpaque(true);
@@ -245,6 +307,11 @@ public class VistaAgrupados extends javax.swing.JFrame {
         this.setVisible(false);
 
     }//GEN-LAST:event_btnRegresarActionPerformed
+
+    private void btnLimpiarAgrupadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAgrupadosActionPerformed
+       
+        
+    }//GEN-LAST:event_btnLimpiarAgrupadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -288,11 +355,11 @@ public class VistaAgrupados extends javax.swing.JFrame {
     public javax.swing.JButton btnRegresar;
     private javax.swing.JPanel fondoPanel;
     private javax.swing.JLabel imagen;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel lblDesviacionMedia;
+    public javax.swing.JLabel lblDesviacionTipica;
+    public javax.swing.JLabel lblMarca;
+    public javax.swing.JLabel lblVarianza;
     private javax.swing.JLabel letDesviacionMedia;
     private javax.swing.JLabel letDesviacionTipica;
     private javax.swing.JLabel letFondoAgrupados;
@@ -310,8 +377,6 @@ public class VistaAgrupados extends javax.swing.JFrame {
     public javax.swing.JTextField txtLimSuperiores;
     // End of variables declaration//GEN-END:variables
 
-    public void setControlador(ControladorAgrupados controlador) {
-//        btnCalcularAgrupados.addMouseListener(controlador);
-    }
+   
 
 }
