@@ -31,9 +31,11 @@ public class ControladorAgrupados {
     }
 
     public void calcularNoAgrupados() {
+       
     try {
         
         double[] superiores = parsearLimites(vista.txtLimSuperiores.getText());
+        
         double[] inferiores = parsearLimites(vista.txtLimInferiores.getText());
         int[] frecuencias = parsearFrecuencias(vista.txtFrecuencias.getText());
 
@@ -51,9 +53,9 @@ public class ControladorAgrupados {
         double desviacionTipica = modelo.calcularDesviacionTipica();
         double varianza = modelo.calcularVarianza();
         List<Double> marcasDeClase = modelo.calcularMarcasDeClase();
-
+      
        
-        limpiarTablaResultados();
+     
 
         
        for (int i = 0; i < marcasDeClase.size(); i++) {
@@ -62,14 +64,16 @@ public class ControladorAgrupados {
             double xMenosMediaCuadrado = Math.pow(xMenosMedia, 2);
             double fPorXMenosMedia = frecuencias[i] * xMenosMedia;
             double fPorXMenosMediaCuadrado = frecuencias[i] * xMenosMediaCuadrado;
-
-            vista.tblAgrupados.setValueAt(frecuencias[i], i, 0);
-            vista.tblAgrupados.setValueAt(marcasDeClase.get(i), i, 1);
-            vista.tblAgrupados.setValueAt(fPorX, i, 2);
-            vista.tblAgrupados.setValueAt(xMenosMedia, i, 3);
-            vista.tblAgrupados.setValueAt(xMenosMediaCuadrado, i, 4);
-            vista.tblAgrupados.setValueAt(fPorXMenosMedia, i, 5);
-            vista.tblAgrupados.setValueAt(fPorXMenosMediaCuadrado, i, 6);
+            String rango = String.format("%.1f - %.1f", inferiores[i], superiores[i]);
+            
+            vista.tblAgrupados.setValueAt(rango, i, 0);
+            vista.tblAgrupados.setValueAt(frecuencias[i], i, 1);
+            vista.tblAgrupados.setValueAt(marcasDeClase.get(i), i, 2);
+            vista.tblAgrupados.setValueAt(fPorX, i, 3);
+            vista.tblAgrupados.setValueAt(xMenosMedia, i, 4);
+            vista.tblAgrupados.setValueAt(xMenosMediaCuadrado, i, 5);
+            vista.tblAgrupados.setValueAt(fPorXMenosMedia, i, 6);
+            vista.tblAgrupados.setValueAt(fPorXMenosMediaCuadrado, i, 7);
         }
 
         

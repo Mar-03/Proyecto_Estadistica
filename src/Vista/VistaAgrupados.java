@@ -27,7 +27,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
         setLocationRelativeTo(null);
          ModeloAgrupados modelo = new ModeloAgrupados();
      ControladorAgrupados controlador = new ControladorAgrupados(this,modelo);
-      controlador.calcularNoAgrupados();
+     
    
     }
 
