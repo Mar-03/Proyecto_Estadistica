@@ -20,12 +20,7 @@ public class Proyecto_Estadistica {
         vistaInicio.setVisible(true);
     
         
-//        VistaNoAgrupados vista = new VistaNoAgrupados();
-//        ModeloNoAgrupados modelo = new ModeloNoAgrupados();
-//
-//        new ControladorNoAgrupados(vista, modelo);
-//
-//        vista.setVisible(true);
+
     }
 }
 

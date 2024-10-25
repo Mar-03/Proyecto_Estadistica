@@ -115,7 +115,7 @@ public class ModeloAgrupados {
         Document documento= new Document();
         try {
             String rts = System.getProperty("user.home");
-            PdfWriter.getInstance(documento, new FileOutputStream(rts + "/Documents/Solucion Datos Agrupados.pdf"));
+            PdfWriter.getInstance(documento, new FileOutputStream(rts + "/Desktop/Estadisticas/Solucion Datos Agrupados.pdf"));
             
      
         
@@ -158,7 +158,7 @@ public class ModeloAgrupados {
         }
         documento.add(pdfTable); 
         documento.close(); 
-        JOptionPane.showMessageDialog(null, "PDF Generado con exito en Documentos ");
+        JOptionPane.showMessageDialog(null, "PDF Generado con exito en carpeta estadisticas ");
         } catch (Exception e) {
            JOptionPane.showMessageDialog(null, "No se puede generar el pdf"+e.getMessage());
         }

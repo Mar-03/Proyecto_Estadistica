@@ -113,7 +113,7 @@ numericos en varios metodos
         Document documento= new Document();
         try {
             String ruta = System.getProperty("user.home");
-            PdfWriter.getInstance(documento, new FileOutputStream(ruta + "/Desktop/Solucion Datos No Agrupados.pdf"));
+            PdfWriter.getInstance(documento, new FileOutputStream(ruta + "/Desktop/Estadisticas/ Solucion Datos No Agrupados.pdf"));
             
      
         
@@ -148,7 +148,7 @@ numericos en varios metodos
         }
         documento.add(pdfTable); 
         documento.close(); 
-        JOptionPane.showMessageDialog(null, "PDF Generado con exito en Escritorio");
+        JOptionPane.showMessageDialog(null, "PDF Generado con exito en carpeta estadisticas");
         } catch (Exception e) {
            JOptionPane.showMessageDialog(null, "No se puede generar el pdf"+e.getMessage());
         }

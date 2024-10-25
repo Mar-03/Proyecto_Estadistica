@@ -32,7 +32,7 @@ public class ControladorNoAgrupados {
 
     public void calcular() {
         try{
-        String[] datosTexto = vista.txtDato.getText().split(",");
+        String[] datosTexto = vista.txtDato.getText().split(", ");
         double[] datos = new double[datosTexto.length];
         for (int i = 0; i < datosTexto.length; i++) {
             datos[i] = Double.parseDouble(datosTexto[i]);

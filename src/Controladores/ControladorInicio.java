@@ -36,16 +36,5 @@ public class ControladorInicio {
             }
         });
     }
-//    
-//    private void mostrarAgrupados(){
-//        VistaAgrupados vistaAgrupados = new VistaAgrupados(vistaInicio);
-//        vistaAgrupados.setVisible(true);
-//        vistaInicio.setVisible(false);
-//    }
-//    
-//    private void mostrarNoAgrupados(){
-//        VistaNoAgrupados vistaNoAgrupados = new VistaNoAgrupados(vistaInicio);
-//        vistaNoAgrupados.setVisible(true);
-//        vistaInicio.setVisible(false);
-//    }
+
 }
