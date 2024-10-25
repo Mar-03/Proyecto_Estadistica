@@ -32,18 +32,17 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
     public JTable getTblNoAgrupados() {
         return tblNoAgrupados;
     }
-
+ public void limpiarTablaResultados() {
+       int rowCount = tblNoAgrupados.getRowCount();  
+    for (int i = 0; i < rowCount; i++) {
+        for (int j = 0; j < tblNoAgrupados.getColumnCount(); j++) {
+            tblNoAgrupados.setValueAt(null, i, j);
+        }
+    }}
     
    
 
-    public void limpiarCampos() {
-        for (int i = 0; i < tblNoAgrupados.getRowCount(); i++) {
-            for (int j = 0; j < tblNoAgrupados.getColumnCount(); j++) {
-                tblNoAgrupados.setValueAt("", i, j);
-            }
-        }
-        
-    }
+   
 
     
 
@@ -89,25 +88,16 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
-                {null, null, null},
                 {null, null, null}
             },
             new String [] {
                 "Rango", "Desviación Media", "Desviación Típica"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         tblNoAgrupados.setSelectionForeground(new java.awt.Color(57, 54, 54));
         tablaNoAgrupados.setViewportView(tblNoAgrupados);
 
-        fondoPanel.add(tablaNoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 489, 130));
+        fondoPanel.add(tablaNoAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 480, 140));
 
         separador.setForeground(new java.awt.Color(255, 255, 255));
         fondoPanel.add(separador, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 157, 310, -1));

@@ -83,7 +83,7 @@ public class ControladorAgrupados {
         vista.lblPromedio.setText(String.format("%.2f", media));
 
     } catch (Exception ex) {
-        
+          JOptionPane.showMessageDialog(vista, "No puede estar ningun campo vacio ni agregar letras solo numeros" );
        
     }
 }

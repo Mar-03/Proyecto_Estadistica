@@ -1,5 +1,14 @@
 package modelos;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -7,6 +16,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Map;
 import java.util.HashMap;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 
 public class ModeloNoAgrupados {
     /* METODO PARA ENCONTRAR rango que es donde se resta el mayor y el menor numero
@@ -85,4 +97,42 @@ numericos en varios metodos
        
         return Math.sqrt(sumarCuadrados / numeros);
    }
+   
+   // aqui pondre el metodo para imprimir 
+  
+
+    public static void descargarPDF(JTable tblNoAgrupados, String destino,  JTextField txtDato) throws Exception {
+        
+    
+        Document documento= new Document();
+        try {
+            String ruta = System.getProperty("user.home");
+            PdfWriter.getInstance(documento, new FileOutputStream(ruta + "/Desktop/Solucion Datos No Agrupados.pdf"));
+        
+        documento.open();
+        
+         String datosIngresados = txtDato.getText();
+        PdfPTable pdfTable = new PdfPTable(tblNoAgrupados.getColumnCount());
+        for (int i = 0; i < tblNoAgrupados.getColumnCount(); i++) {
+            pdfTable.addCell(new Paragraph(tblNoAgrupados.getColumnName(i))); 
+        }
+        for (int row = 0; row < tblNoAgrupados.getRowCount(); row++) {
+            for (int col = 0; col < tblNoAgrupados.getColumnCount(); col++) {
+                Object value = tblNoAgrupados.getValueAt(row, col);
+                pdfTable.addCell(new Paragraph(value != null ? value.toString() : "")); 
+            }
+        }
+        documento.add(pdfTable); 
+        documento.close(); 
+        JOptionPane.showMessageDialog(null, "PDF Generado con exito en Escritorio");
+        } catch (Exception e) {
+           JOptionPane.showMessageDialog(null, "No se puede generar el pdf"+e.getMessage());
+        }
+       
+        
+       
+    }
+
+   
 }
+

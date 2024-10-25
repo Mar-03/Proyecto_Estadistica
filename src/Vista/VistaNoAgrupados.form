@@ -62,7 +62,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="60" y="250" width="489" height="130"/>
+              <AbsoluteConstraints x="60" y="250" width="480" height="140"/>
             </Constraint>
           </Constraints>
 
@@ -77,8 +77,8 @@
                   <Color blue="36" green="36" red="39" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="3" rowCount="5">
-                    <Column editable="false" title="Rango" type="java.lang.Object"/>
+                  <Table columnCount="3" rowCount="4">
+                    <Column editable="true" title="Rango" type="java.lang.Object"/>
                     <Column editable="true" title="Desviaci&#xf3;n Media" type="java.lang.Object"/>
                     <Column editable="true" title="Desviaci&#xf3;n T&#xed;pica" type="java.lang.Object"/>
                   </Table>
