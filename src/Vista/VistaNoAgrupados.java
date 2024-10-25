@@ -257,7 +257,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCalcular;
-    private javax.swing.JButton btnImprimir;
+    public javax.swing.JButton btnImprimir;
     public javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnRegresarNoAgrupados;
     private javax.swing.JPanel fondoPanel;

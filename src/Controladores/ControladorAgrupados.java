@@ -82,7 +82,7 @@ public class ControladorAgrupados {
         vista.lblVarianza.setText(String.format("%.2f", varianza));
         vista.lblPromedio.setText(String.format("%.2f", media));
 
-    } catch (NumberFormatException ex) {
+    } catch (Exception ex) {
         
        
     }
