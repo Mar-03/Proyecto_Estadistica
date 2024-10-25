@@ -17,6 +17,7 @@ public class ModeloInicio {
         initController();
     }
 
+    //BOTÓN "SI"
     private void initController() {
         vistaInicio.btnSiInicio.addActionListener(new ActionListener() {
             @Override
@@ -25,6 +26,7 @@ public class ModeloInicio {
             }
         });
 
+    //BOTÓN "NO"    
         vistaInicio.btnNoInicio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -33,12 +35,14 @@ public class ModeloInicio {
         });
     }
 
+    //MOSTRAR LOS DATOS AGRUPADOS 
     private void mostrarDatosAgrupados() {
         VistaAgrupados datosAgrupados = new VistaAgrupados();
         datosAgrupados.setVisible(true);
         vistaInicio.setVisible(false);
     }
 
+    //MOSTRAR LOS DATOS NO AGRUPADOS 
     private void mostrarDatosNoAgrupados() {
         VistaNoAgrupados datosNoAgrupados = new VistaNoAgrupados();
         datosNoAgrupados.setVisible(true);

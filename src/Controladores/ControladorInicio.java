@@ -17,24 +17,25 @@ public class ControladorInicio {
         initController();
     }
 
+    //BOTÓN "SI"
     private void initController() {
         vistaInicio.btnSiInicio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 VistaAgrupados datosAgrupados = new VistaAgrupados();
                 datosAgrupados.setVisible(true);
-                vistaInicio.setVisible(false); 
+                vistaInicio.setVisible(false);
             }
         });
 
+    //BOTÓN "NO"    
         vistaInicio.btnNoInicio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 VistaNoAgrupados datosNoAgrupados = new VistaNoAgrupados();
                 datosNoAgrupados.setVisible(true);
-                vistaInicio.setVisible(false); 
+                vistaInicio.setVisible(false);
             }
         });
     }
-
 }
