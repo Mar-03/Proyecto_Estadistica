@@ -92,6 +92,7 @@ public class VistaNoAgrupados extends javax.swing.JFrame {
         letDatos.setText("Datos:");
         fondoPanel.add(letDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
 
+        txtDato.setForeground(new java.awt.Color(57, 54, 54));
         txtDato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDatoActionPerformed(evt);

@@ -166,8 +166,14 @@ public class VistaAgrupados extends javax.swing.JFrame {
         tablaAgrupados.setViewportView(tblAgrupados);
 
         fondoPanel.add(tablaAgrupados, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 530, 147));
+
+        txtLimSuperiores.setForeground(new java.awt.Color(57, 54, 54));
         fondoPanel.add(txtLimSuperiores, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 124, 250, -1));
+
+        txtLimInferiores.setForeground(new java.awt.Color(57, 54, 54));
         fondoPanel.add(txtLimInferiores, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 158, 250, -1));
+
+        txtFrecuencias.setForeground(new java.awt.Color(57, 54, 54));
         fondoPanel.add(txtFrecuencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 186, 250, -1));
 
         btnCalcularAgrupados.setBackground(new java.awt.Color(202, 183, 183));
@@ -247,27 +253,31 @@ public class VistaAgrupados extends javax.swing.JFrame {
         fondoPanel.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 80, -1));
 
         lblDesviacionMedia.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        lblDesviacionMedia.setForeground(new java.awt.Color(255, 255, 255));
+        lblDesviacionMedia.setForeground(new java.awt.Color(57, 54, 54));
         lblDesviacionMedia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDesviacionMedia.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lblDesviacionMedia.setOpaque(true);
         fondoPanel.add(lblDesviacionMedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 50, 20));
 
         lblDesviacionTipica.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        lblDesviacionTipica.setForeground(new java.awt.Color(255, 255, 255));
+        lblDesviacionTipica.setForeground(new java.awt.Color(57, 54, 54));
         lblDesviacionTipica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDesviacionTipica.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lblDesviacionTipica.setOpaque(true);
         fondoPanel.add(lblDesviacionTipica, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 50, 20));
 
         lblPromedio.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        lblPromedio.setForeground(new java.awt.Color(255, 255, 255));
+        lblPromedio.setForeground(new java.awt.Color(57, 54, 54));
         lblPromedio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPromedio.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lblPromedio.setOpaque(true);
         fondoPanel.add(lblPromedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 50, 20));
 
         lblVarianza.setFont(new java.awt.Font("Arial Unicode MS", 0, 14)); // NOI18N
-        lblVarianza.setForeground(new java.awt.Color(255, 255, 255));
+        lblVarianza.setForeground(new java.awt.Color(57, 54, 54));
         lblVarianza.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblVarianza.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lblVarianza.setOpaque(true);
         fondoPanel.add(lblVarianza, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 50, 20));
 
         letFondoAgrupados.setBackground(new java.awt.Color(235, 200, 200));
