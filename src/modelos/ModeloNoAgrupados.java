@@ -6,17 +6,22 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
-import java.awt.Desktop;
-import java.io.File;
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Font;
+
+
 import java.io.FileOutputStream;
-import java.io.IOException;
+
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.Collections;
+
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.Map;
-import java.util.HashMap;
+
+import java.util.UUID;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -109,10 +114,28 @@ numericos en varios metodos
         try {
             String ruta = System.getProperty("user.home");
             PdfWriter.getInstance(documento, new FileOutputStream(ruta + "/Desktop/Solucion Datos No Agrupados.pdf"));
+            
+     
         
+        
+            Image header = Image.getInstance("src/Imagen/Magenta Moderna Aula Virtual Google Classroom Header.png");
+            header.scaleToFit(650, 1000);
+            header.setAlignment(Chunk.ALIGN_CENTER);
+            
+             
+            Paragraph parrafo = new Paragraph();
+            parrafo.setAlignment(Paragraph.ALIGN_CENTER);
+            parrafo.add(" Formato creado por Nova \n\n");
+            parrafo.setFont(FontFactory.getFont("Tahoma", 18, Font.BOLD, BaseColor.BLACK));
+            
         documento.open();
-        
-         String datosIngresados = txtDato.getText();
+        documento.add(header);
+        documento.add(parrafo);
+         
+         
+        String datosIngresados = txtDato.getText();
+         documento.add(new Paragraph ("Datos ingresados: \n" + datosIngresados)); 
+          documento.add(new Paragraph ("\n")); 
         PdfPTable pdfTable = new PdfPTable(tblNoAgrupados.getColumnCount());
         for (int i = 0; i < tblNoAgrupados.getColumnCount(); i++) {
             pdfTable.addCell(new Paragraph(tblNoAgrupados.getColumnName(i))); 

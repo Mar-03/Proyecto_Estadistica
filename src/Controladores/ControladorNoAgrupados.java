@@ -56,6 +56,7 @@ public class ControladorNoAgrupados {
         try {
             String destino = "Solucion_Datos_No_Agrupados.pdf";
             modelo.descargarPDF(vista.tblNoAgrupados, destino,vista.txtDato);
+            
            
         } catch (Exception ex) {
             ex.printStackTrace();
