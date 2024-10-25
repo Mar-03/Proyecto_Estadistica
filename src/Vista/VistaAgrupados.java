@@ -160,6 +160,14 @@ public class VistaAgrupados extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null}
             },
             new String [] {
@@ -353,7 +361,7 @@ public class VistaAgrupados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCalcularAgrupados;
-    private javax.swing.JButton btnImprimir;
+    public javax.swing.JButton btnImprimir;
     public javax.swing.JButton btnLimpiarAgrupados;
     public javax.swing.JButton btnRegresar;
     private javax.swing.JPanel fondoPanel;

@@ -27,6 +27,7 @@ public class ControladorAgrupados {
         this.modelo = modelo;
       this.vista.btnCalcularAgrupados.addActionListener(e -> calcularNoAgrupados());
         this.vista.btnLimpiarAgrupados.addActionListener(e ->limpiar());
+        this.vista.btnImprimir.addActionListener(e ->imprimirPDF());
         
     }
 
@@ -83,7 +84,7 @@ public class ControladorAgrupados {
         vista.lblPromedio.setText(String.format("%.2f", media));
 
     } catch (Exception ex) {
-          JOptionPane.showMessageDialog(vista, "No puede estar ningun campo vacio ni agregar letras solo numeros" );
+         
        
     }
 }
@@ -104,14 +105,26 @@ public class ControladorAgrupados {
     }
 
     public double[] parsearLimites(String texto) {
-        return Arrays.stream(texto.split(","))
+        return Arrays.stream(texto.split(", "))
                 .mapToDouble(Double::parseDouble)
                 .toArray();
     }
 
    public int[] parsearFrecuencias(String texto) {
-        return Arrays.stream(texto.split(","))
+        return Arrays.stream(texto.split(", "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
+    }
+   public void  imprimirPDF() {
+        try {
+            String destino = "Solucion_Datos_Agrupados.pdf";
+            modelo.descargarPDF(vista.tblAgrupados, destino,vista.txtFrecuencias, vista.txtLimSuperiores, vista.txtLimInferiores, vista.lblDesviacionMedia
+            , vista.lblDesviacionTipica, vista.lblPromedio, vista.lblVarianza);
+            
+           
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(vista, "Error al crear el PDF: " + ex.getMessage());
+        }
     }
 }
